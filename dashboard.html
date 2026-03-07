@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OO FootWear | Sneaker Fest ID 2023</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="dashboard.js"></script>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-links">
+                <button onclick="scrollToSection('help-section')">Help</button>
+                <span class="divider">|</span>
+                <button onclick="scrollToSection('about-section')">About</button>
+            </div>
+            <div class="top-auth">
+                <button onclick="location.href='/signin'">Sign In</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="navbar">
+        <div class="navbar-left">
+            <div class="logo-placeholder">OO</div>
+        </div>
+        <div class="navbar-center">
+            <div class="search-bar">
+                <input type="text" placeholder="try &quot;Nike Air Jordan&quot;">
+                <div class="search-icon-placeholder"></div>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <div class="notification-icon-placeholder"></div>
+            <div class="cart-pill">
+                <div class="cart-icon-placeholder"></div>
+                <span class="cart-count">2 Items</span>
+            </div>
+            <div class="profile-block">
+                <div class="profile-img-placeholder"></div>
+                <span class="profile-name">Emir Abiyyu</span>
+                <span class="dropdown-arrow-placeholder"></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <section class="hero-banners">
+            <div class="banner-left">
+                <div class="button-group" style="display: flex; gap: 1rem;">
+                    <button class="btn btn-black">View Product</button>
+                    <button class="btn btn-white">Add to Cart</button>
+                </div>
+                <p class="new-arrival">NEW ARRIVAL!</p>
+                <h1>AIR JORDAN 6 G X EASTSIDE</h1>
+                <p class="banner-subtitle">Feel unbeatable from the tee box to the final putt in a design that's pure
+                    early MJ: speed, class.</p>
+                <button class="btn btn-black">View product</button>
+                <div class="shoe-hero-container">
+                </div>
+            </div>
+            <div class="banner-right">
+                <h2>New User Promo for 2026</h2>
+                <p class="banner-subtitle">Log in to Sneaker Heads and get a 20% Discount on selected items!.</p>
+                <button class="btn btn-white">Sign Up Here</button>
+                <div class="shoe-hero-fade-container">
+                </div>
+            </div>
+        </section>
+
+        <section class="today-deals">
+            <div class="section-header">
+                <h2>Today Best Deals!</h2>
+                <div class="scroll-window">
+                    <div class="progress-container">
+                        <div id="scroll-progress-bar" class="progress-bar-fill"></div>
+                    </div>
+                    <button class="scroll-btn left"
+                        onclick="sideScroll(document.getElementById('deals-container'),'left')">❮</button>
+                    </button>
+                    <div class="deals-scroll-container" id="deals-container">
+                        <div class="deals-row">
+                            <div class="deal-card card">
+                                <button class="heart-button">
+                                    <span style="font-size: 14px;">🤍</span>
+                                </button>
+                                <div class="card-image-placeholder"></div>
+                                <h3>Nike Downshifter 12</h3>
+                                <div class="card-meta"><span class="rating">⭐ 4.9</span> | 652 Items Sold</div>
+                                <p class="crossed-price">Rp 969.000</p>
+                                <p class="final-price">Rp 819.000</p>
+
+                                <div class="card-actions">
+                                    <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item
+                                    </button>
+                                    <button class="btn btn-black btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="deal-card card">
+                                <button class="heart-button">
+                                    <span style="font-size: 14px;">🤍</span>
+                                </button>
+                                <div class="card-image-placeholder"></div>
+                                <h3>Compass Retrograde Hi...</h3>
+                                <div class="card-meta"><span class="rating">⭐ 4.9</span> | 412 Items Sold</div>
+                                <p class="crossed-price">Rp 768.000</p>
+                                <p class="final-price">Rp 668.000</p>
+                                <div class="card-actions">
+                                    <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item
+                                    </button>
+                                    <button class="btn btn-black btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+
+                            <div class="deal-card card">
+                                <button class="heart-button">
+                                    <span style="font-size: 14px;">🤍</span>
+                                </button>
+                                <div class="card-image-placeholder"></div>
+                                <h3>Vans Old Skool Shoe</h3>
+                                <div class="card-meta"><span class="rating">⭐ 4.9</span> | 516 Items Sold</div>
+                                <p class="price-only">Rp 1.200.000</p>
+                                <p class="final-price">Rp 1.100.000</p>
+                                <div class="card-actions">
+                                    <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item
+                                    </button>
+                                    <button class="btn btn-black btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="deal-card card">
+                                <button class="heart-button">
+                                    <span style="font-size: 14px;">🤍</span>
+                                </button>
+                                <div class="card-image-placeholder"></div>
+                                <h3>Ventela Repu...</h3>
+                                <div class="card-meta"><span class="rating">⭐ 4.9</span> | 129 Items So...</div>
+                                <p class="crossed-price">Rp 540.000</p>
+                                <p class="final-price">Rp 450.000</p>
+                                <div class="card-actions">
+                                    <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item
+                                    </button>
+                                    <button class="btn btn-black btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="deal-card card">
+                                <button class="heart-button">
+                                    <span style="font-size: 14px;">🤍</span>
+                                </button>
+                                <div class="card-image-placeholder"></div>
+                                <h3>Ventela Repu...</h3>
+                                <div class="card-meta"><span class="rating">⭐ 4.9</span> | 129 Items So...</div>
+                                <p class="crossed-price">Rp 540.000</p>
+                                <p class="final-price">Rp 450.000</p>
+                                <div class="card-actions">
+                                    <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item
+                                    </button>
+                                    <button class="btn btn-black btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="deal-card card">
+                                <button class="heart-button">
+                                    <span style="font-size: 14px;">🤍</span>
+                                </button>
+                                <div class="card-image-placeholder"></div>
+                                <h3>Ventela Repu...</h3>
+                                <div class="card-meta"><span class="rating">⭐ 4.9</span> | 129 Items So...</div>
+                                <p class="crossed-price">Rp 540.000</p>
+                                <p class="final-price">Rp 450.000</p>
+                                <div class="card-actions">
+                                    <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item
+                                    </button>
+                                    <button class="btn btn-black btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="deal-card card">
+                                <button class="heart-button">
+                                    <span style="font-size: 14px;">🤍</span>
+                                </button>
+                                <div class="card-image-placeholder"></div>
+                                <h3>Ventela Repu...</h3>
+                                <div class="card-meta"><span class="rating">⭐ 4.9</span> | 129 Items So...</div>
+                                <p class="crossed-price">Rp 540.000</p>
+                                <p class="final-price">Rp 450.000</p>
+                                <div class="card-actions">
+                                    <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item
+                                    </button>
+                                    <button class="btn btn-black btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="deal-card card">
+                                <button class="heart-button">
+                                    <span style="font-size: 14px;">🤍</span>
+                                </button>
+                                <div class="card-image-placeholder"></div>
+                                <h3>Ventela Repu...</h3>
+                                <div class="card-meta"><span class="rating">⭐ 4.9</span> | 129 Items So...</div>
+                                <p class="crossed-price">Rp 540.000</p>
+                                <p class="final-price">Rp 450.000</p>
+                                <div class="card-actions">
+                                    <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item
+                                    </button>
+                                    <button class="btn btn-black btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="deal-card card">
+                                <button class="heart-button">
+                                    <span style="font-size: 14px;">🤍</span>
+                                </button>
+                                <div class="card-image-placeholder"></div>
+                                <h3>Ventela Repu...</h3>
+                                <div class="card-meta"><span class="rating">⭐ 4.9</span> | 129 Items So...</div>
+                                <p class="crossed-price">Rp 540.000</p>
+                                <p class="final-price">Rp 450.000</p>
+                                <div class="card-actions">
+                                    <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item
+                                    </button>
+                                    <button class="btn btn-black btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="scroll-btn right"
+                        onclick="sideScroll(document.getElementById('deals-container'), 'right', 10, 300, 10)">❯</button>
+                </div>
+
+        </section>
+
+        <section class="shop-intro">
+            <h2>Shop Now, Goodlook Later</h2>
+            <p class="section-subtitle">We have a bunch collection for you, let's go explore and find your dream shoes,
+                make it happen.</p>
+        </section>
+
+        <section class="product-listing">
+            <div class="filters-bar">
+                <button class="filter-pill active"><span class="filter-icon">Nike</span> ✓</button>
+                <button class="filter-pill">Price <span class="dropdown-icon"></span></button>
+                <button class="filter-pill">Size <span class="dropdown-icon"></span></button>
+                <button class="filter-pill">Type <span class="dropdown-icon"></span></button>
+                <span class="filter-divider">|</span>
+                <button class="filter-pill more-filter">More Filter</button>
+            </div>
+
+            <div class="listing-grid">
+                <div class="grid-card card">
+                    <div class="grid-card-top">
+                        <span class="just-in">Just in</span>
+                        <button class="heart-button">
+                            <span style="font-size: 14px;">🤍</span>
+                        </button>
+                    </div>
+                    <div class="grid-image-placeholder"></div>
+                    <h3>Nike Air Max 90</h3>
+                    <div class="card-meta"><span class="rating">⭐ 4.9</span> | 12 Items Sold</div>
+                    <p class="price-range">Rp 1.799.000</p>
+                    <div class="card-actions">
+                        <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item</button>
+                        <button class="btn btn-black btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="grid-card card">
+                    <div class="grid-card-top">
+                        <span class="just-in">Just in</span>
+                        <button class="heart-button">
+                            <span style="font-size: 14px;">🤍</span>
+                        </button>
+                    </div>
+                    <div class="grid-image-placeholder"></div>
+                    <h3>Nike Air Max 90</h3>
+                    <div class="card-meta"><span class="rating">⭐ 4.9</span> | 12 Items Sold</div>
+                    <p class="price-range">Rp 1.799.000</p>
+                    <div class="card-actions">
+                        <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item</button>
+                        <button class="btn btn-black btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="grid-card card">
+                    <div class="grid-card-top">
+                        <span class="just-in">Just in</span>
+                        <button class="heart-button">
+                            <span style="font-size: 14px;">🤍</span>
+                        </button>
+                    </div>
+                    <div class="grid-image-placeholder"></div>
+                    <h3>Nike Air Max 90</h3>
+                    <div class="card-meta"><span class="rating">⭐ 4.9</span> | 12 Items Sold</div>
+                    <p class="price-range">Rp 1.799.000</p>
+                    <div class="card-actions">
+                        <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item</button>
+                        <button class="btn btn-black btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="grid-card card">
+                    <div class="grid-card-top">
+                        <span class="just-in">Just in</span>
+                        <button class="heart-button">
+                            <span style="font-size: 14px;">🤍</span>
+                        </button>
+                    </div>
+                    <div class="grid-image-placeholder"></div>
+                    <h3>Nike Air Max 90</h3>
+                    <div class="card-meta"><span class="rating">⭐ 4.9</span> | 12 Items Sold</div>
+                    <p class="price-range">Rp 1.799.000</p>
+                    <div class="card-actions">
+                        <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item</button>
+                        <button class="btn btn-black btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+
+
+                <div class="grid-card card">
+                    <div class="grid-card-top">
+                        <span class="just-in">Just in</span>
+                        <button class="heart-button">
+                            <span style="font-size: 14px;">🤍</span>
+                        </button>
+                    </div>
+                    <div class="grid-image-placeholder"></div>
+                    <h3>Nike Air Max 90</h3>
+                    <div class="card-meta"><span class="rating">⭐ 4.9</span> | 12 Items Sold</div>
+                    <p class="price-range">Rp 1.799.000</p>
+                    <div class="card-actions">
+                        <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item</button>
+                        <button class="btn btn-black btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+
+
+                <div class="grid-card card">
+                    <div class="grid-card-top">
+                        <span class="just-in">Just in</span>
+                        <button class="heart-button">
+                            <span style="font-size: 14px;">🤍</span>
+                        </button>
+                    </div>
+                    <div class="grid-image-placeholder"></div>
+                    <h3>Nike Air Max 90</h3>
+                    <div class="card-meta"><span class="rating">⭐ 4.9</span> | 12 Items Sold</div>
+                    <p class="price-range">Rp 1.799.000</p>
+                    <div class="card-actions">
+                        <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item</button>
+                        <button class="btn btn-black btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="grid-card card">
+                    <div class="grid-card-top">
+                        <span class="just-in">Just in</span>
+                        <button class="heart-button">
+                            <span style="font-size: 14px;">🤍</span>
+                        </button>
+                    </div>
+                    <div class="grid-image-placeholder"></div>
+                    <h3>Nike Air Max 90</h3>
+                    <div class="card-meta"><span class="rating">⭐ 4.9</span> | 12 Items Sold</div>
+                    <p class="price-range">Rp 1.799.000</p>
+                    <div class="card-actions">
+                        <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item</button>
+                        <button class="btn btn-black btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="grid-card card">
+                    <div class="grid-card-top">
+                        <span class="just-in">Just in</span>
+                        <button class="heart-button">
+                            <span style="font-size: 14px;">🤍</span>
+                        </button>
+                    </div>
+                    <div class="grid-image-placeholder"></div>
+                    <h3>Nike Air Max 90</h3>
+                    <div class="card-meta"><span class="rating">⭐ 4.9</span> | 12 Items Sold</div>
+                    <p class="price-range">Rp 1.799.000</p>
+                    <div class="card-actions">
+                        <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item</button>
+                        <button class="btn btn-black btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="grid-card card">
+                    <div class="grid-card-top">
+                        <span class="just-in">Just in</span>
+                        <button class="heart-button">
+                            <span style="font-size: 14px;">🤍</span>
+                        </button>
+                    </div>
+                    <div class="grid-image-placeholder"></div>
+                    <h3>Nike Air Max 90</h3>
+                    <div class="card-meta"><span class="rating">⭐ 4.9</span> | 12 Items Sold</div>
+                    <p class="price-range">Rp 1.799.000</p>
+                    <div class="card-actions">
+                        <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item</button>
+                        <button class="btn btn-black btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="grid-card card">
+                    <div class="grid-card-top">
+                        <span class="just-in">Just in</span>
+                        <button class="heart-button">
+                            <span style="font-size: 14px;">🤍</span>
+                        </button>
+                    </div>
+                    <div class="grid-image-placeholder"></div>
+                    <h3>Nike Air Max 90</h3>
+                    <div class="card-meta"><span class="rating">⭐ 4.9</span> | 12 Items Sold</div>
+                    <p class="price-range">Rp 1.799.000</p>
+                    <div class="card-actions">
+                        <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item</button>
+                        <button class="btn btn-black btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="grid-card card">
+                    <div class="grid-card-top">
+                        <span class="just-in">Just in</span>
+                        <button class="heart-button">
+                            <span style="font-size: 14px;">🤍</span>
+                        </button>
+                    </div>
+                    <div class="grid-image-placeholder"></div>
+                    <h3>Nike Air Max 90</h3>
+                    <div class="card-meta"><span class="rating">⭐ 4.9</span> | 12 Items Sold</div>
+                    <p class="price-range">Rp 1.799.000</p>
+                    <div class="card-actions">
+                        <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item</button>
+                        <button class="btn btn-black btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="grid-card card">
+                    <div class="grid-card-top">
+                        <span class="just-in">Just in</span>
+                        <button class="heart-button">
+                            <span style="font-size: 14px;">🤍</span>
+                        </button>
+                    </div>
+                    <div class="grid-image-placeholder"></div>
+                    <h3>Nike Air Max 90</h3>
+                    <div class="card-meta"><span class="rating">⭐ 4.9</span> | 12 Items Sold</div>
+                    <p class="price-range">Rp 1.799.000</p>
+                    <div class="card-actions">
+                        <button class="btn btn-white btn-sm" onclick="openPreview('test')">View Item</button>
+                        <button class="btn btn-black btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="view-more-container">
+                <button class="btn btn-black btn-round">View more</button>
+            </div>
+        </section>
+
+        <section class="official-store">
+            <h2>The Official Store of The Amazing Brand</h2>
+            <p class="section-subtitle">We work together with high quality and famous brand around the world.</p>
+
+            <div class="brand-grid">
+                <div class="brand-card">
+                    <div class="brand-card-header">
+                        <div class="brand-logo-placeholder"></div>
+                        <div class="brand-info">
+                            <h4>New Balance</h4>
+                            <div class="card-meta"><span class="rating">⭐ 4.9</span> (10219 Review)</div>
+                            <div class="followers">7.2M Followers</div>
+                        </div>
+                        <button class="visit-btn">Visit</button>
+                    </div>
+                    <div class="brand-product-previews">
+                        <div class="grid-image-placeholder-small"></div>
+                        <div class="grid-image-placeholder-small"></div>
+                        <div class="grid-image-placeholder-small"></div>
+                        <div class="grid-image-placeholder-small"></div>
+                    </div>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-card-header">
+                        <div class="brand-logo-placeholder"></div>
+                        <div class="brand-info">
+                            <h4>New Balance</h4>
+                            <div class="card-meta"><span class="rating">⭐ 4.9</span> (10219 Review)</div>
+                            <div class="followers">7.2M Followers</div>
+                        </div>
+                        <button class="visit-btn">Visit</button>
+                    </div>
+                    <div class="brand-product-previews">
+                        <div class="grid-image-placeholder-small"></div>
+                        <div class="grid-image-placeholder-small"></div>
+                        <div class="grid-image-placeholder-small"></div>
+                        <div class="grid-image-placeholder-small"></div>
+                    </div>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-card-header">
+                        <div class="brand-logo-placeholder"></div>
+                        <div class="brand-info">
+                            <h4>New Balance</h4>
+                            <div class="card-meta"><span class="rating">⭐ 4.9</span> (10219 Review)</div>
+                            <div class="followers">7.2M Followers</div>
+                        </div>
+                        <button class="visit-btn">Visit</button>
+                    </div>
+                    <div class="brand-product-previews">
+                        <div class="grid-image-placeholder-small"></div>
+                        <div class="grid-image-placeholder-small"></div>
+                        <div class="grid-image-placeholder-small"></div>
+                        <div class="grid-image-placeholder-small"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="view-more-container">
+                <button class="btn btn-black btn-round">View more</button>
+            </div>
+        </section>
+
+        <section class="full-width-callout">
+            <div class="callout-content">
+                <h2>BRINGING YOU TO UPDATE FANTASTIC FOOTWEAR</h2>
+                <p>View all brands of our collection on FootWear, there is another collection. Please check it out bro,
+                    seriously!</p>
+                <button class="btn btn-white btn-round">More about us</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">OO FootWear</div>
+                <p>Footwear was designed and founded in 2023 by person. The theme is about sneakers ecommerce that use
+                    for shoes selling around the world.</p>
+                <div class="offer-box">
+                    <div class="offer-content">
+                        <h3>Don't Wanna Miss Our Offers?</h3>
+                        <p>Drop your email below, and start receiving the best offers from FootWear!</p>
+                    </div>
+                    <div class="offer-input-group">
+                        <input type="email" placeholder="Your email@mail.com">
+                        <button class="offer-subscribe-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-col">
+                    <h5>Products</h5>
+                    <ul>
+                        <li><a href="#">Shoes</a></li>
+                        <li><a href="#">Apparel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Featured</h5>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Sale</a></li>
+                        <li><a href="#">Start Selling</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Collections</h5>
+                    <ul>
+                        <li><a href="#">Nike</a></li>
+                        <li><a href="#">Adidas</a></li>
+                        <li><a href="#">Vans</a></li>
+                        <li><a href="#">Aero Street</a></li>
+                        <li><a href="#">Compass</a></li>
+                        <li><a href="#">Ventela</a></li>
+                        <li><a href="#">Bata</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-col">
+                        <h5>Support & Info</h5>
+                        <ul class="footer-action-links">
+                            <li>
+                                <button class="footer-btn" onclick="scrollToSection('help-section')">
+                                    Help Center <span class="arrow">→</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="footer-btn" onclick="scrollToSection('about-section')">
+                                    About Our Brand <span class="arrow">→</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="footer-btn" onclick="scrollToSection('shipping-info')">
+                                    Shipping Policy <span class="arrow">→</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="product-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closePreview()">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <div class="grid-image-placeholder" style="height: 300px; background-color: #EBEBEB;"></div>
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title" style="margin-bottom: 0.5rem;">Shoe Name</h2>
+                    <div class="card-meta" style="margin-bottom: 1rem;"><span class="rating">⭐ 4.9</span> | Verified
+                        Authentic</div>
+                    <p id="modal-description"
+                        style="color: var(--text-color-secondary); line-height: 1.6; margin-bottom: 1.5rem;">Description
+                        goes here...</p>
+                    <div class="final-price" id="modal-price" style="font-size: 1.5rem; color: var(--accent-orange);">
+                        $0.00</div>
+
+                    <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                        <button class="btn btn-black" style="flex: 2;">Add to Cart</button>
+                        <button class="btn btn-white" style="flex: 1;">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
