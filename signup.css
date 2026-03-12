@@ -1,0 +1,89 @@
+/* --- SIGN UP PAGE SPECIFIC STYLES --- */
+
+/* Full page container centering the form vertically and horizontally */
+.signup-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 40px); /* Adjusting for top bar roughly */
+    padding: 2rem;
+    background-color: var(--bg-secondary);
+}
+
+/* Main card wrapper for the signup form */
+.signup-card {
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius-card);
+    padding: 3rem 2.5rem;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Slight shadow to lift it off the background */
+    border: 1px solid var(--border-color);
+}
+
+/* Header section inside the card */
+.signup-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Heading style */
+.signup-header h2 {
+    font-size: 2rem;
+    color: var(--text-color-primary);
+    margin-bottom: 0.5rem;
+}
+
+/* Subtitle under the heading */
+.signup-header p {
+    color: var(--text-color-secondary);
+    font-size: 0.95rem;
+}
+
+/* Notice that we are reusing .input-group styling from style.css implicitly, 
+   but adding specifics if needed here. */
+
+/* Styling for the terms checkbox area */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Checkbox label styling */
+.checkbox-group label {
+    font-size: 0.85rem;
+    color: var(--text-color-secondary);
+}
+
+/* Link inside checkbox label */
+.checkbox-group a {
+    color: var(--text-color-primary);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* Ensure the submit button takes full width and has enough spacing */
+.submit-btn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+/* Footer text linking to login */
+.login-link {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--text-color-secondary);
+}
+
+/* Accent color link in footer */
+.login-link a {
+    color: var(--accent-orange);
+    text-decoration: none;
+    font-weight: 600;
+}

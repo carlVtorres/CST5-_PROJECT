@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OO FootWear | Sign Up</title>
+    <!-- Include main styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Include specific signup styles -->
+    <link rel="stylesheet" href="signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Include specific signup script -->
+    <script src="signup.js" defer></script>
+</head>
+
+<body>
+    <!-- Top bar similar to dashboard -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-links">
+                <button onclick="location.href='dashboard.html#help-section'">Help</button>
+                <span class="divider">|</span>
+                <button onclick="location.href='dashboard.html#about-section'">About</button>
+            </div>
+            <!-- Auth link changed back to dashboard/signin context -->
+            <div class="top-auth">
+                <button onclick="location.href='dashboard.html'">Back to Store</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container for Sign Up -->
+    <main class="signup-page-container">
+        <!-- Reusing styling structure from login content -->
+        <div class="signup-card">
+            <!-- Header section of the form -->
+            <div class="signup-header">
+                <h2>Create an Account</h2>
+                <p>Join Sneaker Heads and start shopping today.</p>
+            </div>
+
+            <!-- Form element calling handleSignup on submit -->
+            <form id="signup-form" onsubmit="handleSignup(event)">
+                <!-- Full name input field -->
+                <div class="input-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required placeholder="Enter your full name">
+                </div>
+                
+                <!-- Email input field -->
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                </div>
+
+                <!-- Password input field -->
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="Create a password">
+                </div>
+
+                <!-- Confirm password input field -->
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required placeholder="Confirm your password">
+                </div>
+
+                <!-- Checkbox for terms -->
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+                </div>
+
+                <!-- Full-width submit button -->
+                <button type="submit" class="btn btn-black submit-btn">Sign Up</button>
+            </form>
+
+            <!-- Link back to login -->
+            <p class="login-link">
+                Already have an account? <a href="dashboard.html">Sign in here</a>
+            </p>
+        </div>
+    </main>
+
+</body>
+
+</html>
